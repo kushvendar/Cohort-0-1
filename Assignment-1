@@ -1,0 +1,31 @@
+// Week 1.2 Cohort Assignment-1
+
+// 1. Counter in js from 30 to 0
+
+let num=30
+function counter(num){
+    if(num==0){
+        clearInterval(time)
+    }
+    console.log(num)
+    num--;
+}
+let time=setInterval(counter,1*1000)
+
+// 3. Terminal Clock
+function terminalClock() {
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+    
+    // Format the string with leading zeroes
+    const clockStr = `[${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}]`;
+    console.log(clockStr)
+
+    // Set a timeout for one minute
+    setTimeout(terminalClock, 1000);
+}
+
+terminalClock();
+
